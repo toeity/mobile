@@ -9,8 +9,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import { includes } from 'lodash'
 
 export default function Index({ navigation }) {
-    const user = useSelector(state => state.user)
-    console.log(putEventStudent);
+    const user = useSelector(state => state.user) 
     const [CurrentDate, setCurrentDate] = useState("")
     const [modalData, setmodalData] = useState(null);
     const [searchKey, setSearchKey] = useState("")
@@ -18,7 +17,7 @@ export default function Index({ navigation }) {
     const [value, setValue] = useState("");
     const [items, setItems] = useState([
         { label: 'ทั้งหมด', value: '' },
-        { label: 'รอบเช้า', value: 2 },
+        { label: 'รอบเช้า', value: 2 }, 
         { label: 'รอบเย็น', value: 1 }
     ]);
 
@@ -27,24 +26,7 @@ export default function Index({ navigation }) {
             ShowEventStudentAll() 
         })
     }
- async function ShowEventData() {
-        await ShowEventData(payload, user.token)
-        setAlertModal(false)
-        console.log(CurrentDate);
-        navigation.goBack();
-    }
-
-    function openDetailModal(item, date) {
-        ShowEventData()
-            .then((result) => {
-                if (result.status === 200) {
-                    setmodalData(result.data);
-                    console.log(result.data);
-                    setModalVisible(true);
-                }
-            });
-    }
-
+ 
     function ShowEventStudentAll() {
         ShowEventAll().then((result) => {
             if (result.status === 200) {
@@ -77,6 +59,7 @@ export default function Index({ navigation }) {
         if (dataEventStudent !== null) {
             dataEventStudent
             .filter(item => {
+                console.log(item.student?.user?.car_no);
                 return item.student?.user?.car_no == user.data?.car_no
             })
             .filter(item => {

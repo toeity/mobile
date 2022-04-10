@@ -56,10 +56,7 @@ function CustomDrawerContent(props) {
   );
 }
 export default function App() {
-  const {useEffect} = React;
-  useEffect(()=>{ 
-
-  },[])
+  
   return (
     // ต้องทำif else ให้เข้าเงื่อนไขเผื่อเข้าแต่ละผู้ใช้
     // หน้าขอสิทธิีีuser Request
