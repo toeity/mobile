@@ -130,9 +130,9 @@ const styles = StyleSheet.create({
     tinyLogo: {
         width: 130,
         height: 260,
-        marginTop: 0,
+        marginTop: 10,
         alignItems: 'center',
-        marginBottom: 5,
+        marginBottom: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginHorizontal: 5,
@@ -186,8 +186,9 @@ const styles = StyleSheet.create({
 
     },
     tinysub: {
-        width: 50,
-        height: 50,
+        width: 60,
+        height: 60,
+        marginTop:10,
 
     },
     
@@ -195,7 +196,7 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: '#fff',
         width: '95%',
-        height:'20%',
+        height:'21.3%',
         paddingVertical: 14,
         borderRadius: 10,
         alignItems: 'center',
@@ -207,7 +208,7 @@ const styles = StyleSheet.create({
     cardbottom: {
         backgroundColor: '#fff',
         width: '95%',
-        height:'20%',
+        height:'21.3%',
         paddingVertical: 14,
         borderRadius: 10,
         alignItems: 'center',

@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Image, Platform, ScrollView } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { useSelector } from 'react-redux'
 import { ShowUserCountData } from "../services/authService";
 import { ShowNotiCountData } from '../services/notiService';
@@ -136,22 +136,6 @@ export default function Index({ navigation }) {
             </View>
         }
     }
-
-    // function initListYear() {
-    //     dataVisuallize().then(({ data }) => {
-    //         setDataList(data)
-    //         const mapyear = Object.keys(data).map((year) => (
-    //             { label: year, value: year }
-    //         ))
-    //         setItemsyear(mapyear)
-    //         getDriveSum().then((data) => {
-    //             setDataSumDriver(data.data);
-    //             mapDataChartYear();
-    //         })
-    //     })
-    // };
-
-
 
     return (
         <View style={styles.container}>
